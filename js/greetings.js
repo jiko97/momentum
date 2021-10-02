@@ -24,13 +24,15 @@
 
 // parseInt() -> daya type을 int로 변경 
 
-// Step 1. HTML element를 가져오기
+// Step 1. HTML element를 가져오기 (DOM; Document Object Model)
 
-// 1. .getElementById -> id명으로 element 추출
+// 0. document -> 웹페이지 자체를 의미하는 객체 // HTML에 접근하기 위해서 반드시 document 객체부터 시작
 
-// 2. .getElementsByClassName -> class명으로 element 추출
+// 1. document.getElementById -> id명으로 element 추출
 
-// 3. .getElementsByTagName -> tag명으로 element 추출 
+// 2. document.getElementsByClassName -> class명으로 element 추출
+
+// 3. document.getElementsByTagName -> tag명으로 element 추출 
 
 // 4. document.querySelector -> 가장 첫번째 하나의 element만 추출 / css selector 사용하여 검색  / 하위 태그까지 선택 가능
 
@@ -38,7 +40,7 @@
 
 // Step 2. Event를 Listen하기 
 
-// Event -> 마우스, 키보드로 무언가 할 때 일어나는 일 
+// Event -> 웹 브라우저가 알려주는 HTML 요소에 대한 사건 발생
 
 // 객체명.addEventListener("이벤트명", 함수명) -> 절대 함수를 실행시키면 안됨
 
@@ -50,7 +52,6 @@
 // 3) .remove() -> 클래스 리스트에서 제거 
 // 4) .toggle() -> 클래스가 리스트에 존재 여부를 확인하여 add, remove 번갈아가며 진행 
 const loginForm = document.querySelector("#login-form");
-const logoutForm = document.querySelector("#logout-form");
 const loginInput = document.querySelector("#login-form input");
 const h1Name = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
@@ -72,14 +73,6 @@ function onLoginSubmit(event) {
     // h1Name.innerText = "Hello " + username;
     // string과 변수를 함께 나타내고 싶을 때 -> `${}` 백틱(`) 사용!
     paintGreetings(username);
-    logoutForm.classList.remove(HIDDEN_CLASSNAME);
-}
-function onLogoutSubmit(event) {
-    event.preventDefault();
-    h1Name.classList.add(HIDDEN_CLASSNAME);
-    logoutForm.classList.add(HIDDEN_CLASSNAME);
-    localStorage.removeItem(USERNAME_KEY);
-    loginForm.classList.remove(HIDDEN_CLASSNAME);
 }
 
 if (savedUserName === null) {
@@ -87,7 +80,5 @@ if (savedUserName === null) {
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     paintGreetings(savedUserName);
-    logoutForm.classList.remove(HIDDEN_CLASSNAME);
-    logoutForm.addEventListener("submit", onLogoutSubmit);
 }
 

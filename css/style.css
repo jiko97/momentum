@@ -1,4 +1,72 @@
+@import "reset.css";
+
 .hidden {
   display: none;
   /* visibility: hidden; */
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("https://source.unsplash.com/1600x900");
+  opacity: 0.8;
+}
+
+.box01 h2 {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 150px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+}
+#login-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.login-form__input {
+  border: none;
+  font-size: 50px;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  width: 500px;
+  margin-bottom: 50px;
+}
+.login-form__input::placeholder {
+  color: white;
+}
+#todo-form {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-form__input {
+  border: none;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  width: 350px;
+  margin-bottom: 50px;
+}
+.todo-form__input::placeholder {
+  color: white;
+}
+#quote {
+  text-align: center;
+  color: white;
+  padding: 0 100px;
+}
+#quote span {
+  font-size: 30px;
+}
+#author span {
+  display: block;
+  font-size: 20px;
+  margin-top: 15px;
+}
+#weather {
+  text-align: center;
+  color: white;
+  margin-top: 80px;
 }

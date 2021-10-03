@@ -8,19 +8,49 @@
     <title>Momentum</title>
   </head>
   <body>
-    <!-- input의 유효성 검사를 작동하기 위해서는 form 태그 필요 -->
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What's your name?"
-      />
-      <input type="submit" value="Log in" />
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
+    <div class="box01">
+      <!-- input의 유효성 검사를 작동하기 위해서는 form 태그 필요 -->
+      <h2 id="clock">00:00:00</h2>
+      <div class="box02">
+        <form id="login-form" class="hidden">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What's your name?"
+            class="login-form__input"
+          />
+          <input
+            type="submit"
+            value="Log in"
+            class="login-form__input hidden"
+          />
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
+    </div>
+      <form id="todo-form">
+        <input type="text" placeholder="Write your schedule List" class="todo-form__input" />
+      </form>
+      <ul id="todo-list"></ul>
+      <div id="quote">
+        <span></span>
+        <div id="author">
+          <span></span>
+        </div>
+      </div>
+
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <!-- <script src="js/background.js"></script> -->
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

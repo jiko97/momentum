@@ -59,7 +59,7 @@ const USERNAME_KEY = "username";
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 function paintGreetings(username) {
-    h1Name.innerText = `Hello ${username}`;
+    h1Name.innerText = `Hello, ${username}`;
     h1Name.classList.remove(HIDDEN_CLASSNAME);
 }
 function onLoginSubmit(event) {

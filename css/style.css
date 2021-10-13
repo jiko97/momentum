@@ -1,82 +1,10 @@
 @import "reset.css";
+@import "body.css";
+@import "dateAndTime.css";
+@import "loginAndTodo-form.css";
+@import "quoteAndWeather.css";
 
 .hidden {
   display: none;
   visibility: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: tomato;
-  opacity: 0.8;
-}
-#dates {
-  font-size: 40px;
-  font-weight: 600;
-  color: white;
-  margin-top: 50px;
-}
-#clock {
-  font-size: 120px;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 50px;
-}
-#login-form input {
-  text-align: center;
-  background-color: transparent;
-  border-style: none;
-  font-size: 50px;
-  color: white;
-}
-#login-form input::placeholder,
-#todo-form input::placeholder {
-  color: white;
-}
-#login-form input:focus::placeholder,
-#todo-form input:focus::placeholder {
-  color: transparent;
-}
-#todo-form input {
-  text-align: center;
-  background-color: transparent;
-  border-style: none;
-  font-size: 30px;
-  color: white;
-}
-#greeting {
-  color: white;
-  font-size: 50px;
-  font-weight: 600;
-}
-#todo-list {
-  color: white;
-  font-size: 30px;
-}
-#todo-list li {
-  margin: 20px;
-}
-#todo-list span {
-  margin: 30px;
-}
-#quote {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 200px;
-  text-align: center;
-}
-#author {
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  margin: -20px 150px;
-}
-#weather {
-  color: white;
-  display: flex;
 }

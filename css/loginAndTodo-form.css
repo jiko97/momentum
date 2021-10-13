@@ -1,0 +1,37 @@
+#login-form input {
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  font-size: 50px;
+  color: white;
+}
+#login-form input::placeholder,
+#todo-form input::placeholder {
+  color: white;
+}
+#login-form input:focus::placeholder,
+#todo-form input:focus::placeholder {
+  color: transparent;
+}
+#todo-form input {
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  font-size: 30px;
+  color: white;
+}
+#greeting {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+#todo-list {
+  color: white;
+  font-size: 30px;
+}
+#todo-list li {
+  margin: 20px;
+}
+#todo-list span {
+  margin: 30px;
+}
